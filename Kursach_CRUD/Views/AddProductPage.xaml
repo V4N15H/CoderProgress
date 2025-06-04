@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Kursach_CRUD.Views.AddProductPage"
+             Title="Добавить комплектующие">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <Label Text="Название" />
+            <Entry x:Name="NameEntry" Placeholder="Например: Процессор Ryzen 5" />
+
+            <Label Text="Категория" />
+            <Picker x:Name="CategoryPicker" Title="Выберите категорию">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Процессор</x:String>
+                        <x:String>Видеокарта</x:String>
+                        <x:String>ОЗУ</x:String>
+                        <x:String>SSD</x:String>
+                        <x:String>Материнская плата</x:String>
+                        <x:String>Блок питания</x:String>
+                        <x:String>Корпус</x:String>
+                        <x:String>Кулер</x:String>
+                        <x:String>Вентилятор</x:String>
+                        <x:String>Прочее</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Label Text="Серийные номера (по одному в строке)" />
+            <Editor x:Name="SerialNumbersEditor" HeightRequest="100" Placeholder="Введите один номер на строку" />
+
+
+            <Label Text="Количество" />
+            <Entry x:Name="QuantityEntry" Keyboard="Numeric" />
+
+            <Label Text="Цена (₽)" />
+            <Entry x:Name="PriceEntry" Keyboard="Numeric" />
+
+            <Button Text="Добавить" Clicked="OnAddClicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

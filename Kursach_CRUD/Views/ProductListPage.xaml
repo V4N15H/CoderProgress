@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Kursach_CRUD.Views.ProductListPage"
+             Title="Список комплектующих">
+    <CollectionView x:Name="ProductCollection" Margin="10">
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Frame BorderColor="Gray" Padding="10" Margin="5">
+                    <VerticalStackLayout>
+                        <Label Text="{Binding Name}" FontSize="18" FontAttributes="Bold" />
+                        <Label Text="{Binding Category}" FontSize="14" />
+                        <Label Text="{Binding Price, StringFormat='Цена: {0}₽'}" />
+                        <Label Text="{Binding Quantity, StringFormat='Количество: {0}'}" Margin="0,5,0,0" />
+
+                        <Button Text="{Binding ToggleButtonText}" 
+                            Clicked="OnToggleSerialsClicked"
+                            FontSize="12"
+                            Padding="0"
+                            HorizontalOptions="Start" />
+                        <Button Text="Редактировать" 
+                            Clicked="OnEditProductClicked"
+                            FontSize="12"
+                            BackgroundColor="#2196F3"
+                            TextColor="White" />
+
+                        <Button Text="Удалить" 
+                            Clicked="OnDeleteProductClicked"
+                            FontSize="12"
+                            BackgroundColor="#F44336"
+                            TextColor="White" />
+
+                        <!-- Список серийных номеров -->
+                        <CollectionView ItemsSource="{Binding SerialNumbers}" IsVisible="{Binding IsExpanded}" Margin="10,0,0,0">
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <Label Text="{Binding}" FontSize="12" />
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+                    </VerticalStackLayout>
+                </Frame>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+</ContentPage>
