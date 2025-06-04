@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="V5N15H">
+  <title>Nolanverse</title>
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link href="css/carousel.css" rel="stylesheet">
+</head>
+<body>
+<div class="container-fluid">
+  <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+    <a href="#" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+      <img class="bi me-3" role="img" aria-label="Galaxy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAACXBIWXMAAAsTAAALEwEAmpwYAAAM+klEQVR4nNWbCXAUVRqA4x6uulvrHtbWnuXWHpYL6U4kCuiioHggKri6k+4JIcFwhnAjAYGILELCJRAwQIQo9xFAzgDhkltM5D7CJQLhFpZDa91112/rn+6emZ7puZIBy1f1V6E9/fp97/3vv95LQsJNanVc/Mj/vxWdOYrGWUXjmqqDqvOlqnFF1dh2byZ3JNzqlpzKQ2oquqrT7P7W/LxmvXCbqjNU1Tmm6nytaLisJ+b/I1AUnatJmfwkjihRDXJm0GA0PlB03HVc3B5tTzJRis5XZh/XVZ0nrGcpz3NXsps/p7i5x/O7NP4gkuLi7oRb2VQ3jWSAD6ZD9nBw9YMHWtngTylu2jVuzPei6U/ReFRJ5bFYJuqWtiSddAHLGQHnbxhy+CxMfB+eyrGBVyXqPJXwbW+Jbl4UoLQ8H7Al1Vdh+mp4Itu25+amtOJXCd/W9oDOrz0q3RqOXwyGFvn0MgyfYai9B1rjkqLRMpbviIrXcfHLZBd16mo8oqSRInu45gayFk3R2CEgJWXOwJZUHAW9v99qa0wSY+TcK7cpOpmKzhRVZ7efMQu21BqXVI1yRSc/0U1jl4vv3lRgVSdLPvxcDzh7PTz02Wvw9kJDI0xrfkhJpV5gny178UwgWP0MY3u06A3NukKjtpDsdpgEjfOKTlGim/tvCnDK89ylaFyQj83fEB7Ykh2H4YVe3kH+W9HJTRjEd87foOm5Gyw8dYUvh06Dt+bC8u1w5LxzP2euwvYqw1a8VgSNO9jA/6dqlNZNJSnu0IpOD/nIM13g1JXooE9dNgZpDbBoEcejeS+SBq2ugB5jIDnNayj/q2iMaujizrgB35vJHYrOCfnA2PmxDVK0ImsIfHS4drCB8vFx6F0ISabaKxpHktzUjxu0otFSOm6QCbtPxHfwtRFZ8ae7eKH/pWq8FJZDp6ei0SZa6OXSceZgOBfBgEUSeX/tLmMfZxfAkznw8Cu+LSBGyz0QcicYeziUWxQ58Rl0e8u3txWN7k7jF7WXLSCxfHIqD0UGbsVvVZ3L0vHUFTUDFQM1YSE07+HshkJJSmvoVADllaEncOQsWxDUw4lB1RkkmZiShhLdKuu4PardxthHsRgcAfVfRfl3u5EweA5M2QiL9/lk1g4YswL6lsDzr9rhO+ZD5VHn74xfYFvpmAKgkM3KoP7eD6r/GRn2YDW4B/gGLAAFi2BFFaw+Fp3MqYBub0OKGdFJEiMT6LS1hrzrSy8lC0uobUtxcbei8al0+o+SCCt73ZgYT3DRBgbPhlVHowcNlHmVkP6mb/J6jjXiev9vVl2E9De8huxDp+gsxcXdqk5ZkpuOUUFLmCdqI25h6bbQwOt2Gx/+a3uYv7PmoIHy+kyfL5bUVbaMF/gSbDpsbDt5nqjRJXD8ShqKOSHXAiswEVX7kSzY+Ykz8JKtxkdb9o0frCXjV0FKhtH/wMm+bx6+BHvOQcEcXzzuVExQdT6W51GtsicY0ThrqVbL3kbmFAh86IwRW4smjFwcBchRKDsKy48YIv8O9/sRi33BhxX6HrpoAO+shme7e43Y64EMSW46ms8qIq+uRlv5cZNseNSMcbuMcjYio+cazx/KgGlbgwe97AgsOABz9sL0PTB9d7DM3gulB2BpFazye1f+nT3B6P/xToZPPnDBABaZvMK738/9qRk/8Geo34ofS6wvfrmuxu8iAW+TjsRtlGyGB03VGlfq7COlaiLPG2fDon3GYJdUway9zoDhZOYeY4LeP2hMxLRd0LSr0f+IWbDnvA+48jQ80taEdvNyIIeis9q06DkRCwNJaVC6yxj86CWGaklKt3BzMLRESlaw8XIezAqxkjWVwYt8aebWYz5gkb4TvXt5gcPCZVv5e0jgxFRayY9cA+2qmTvVp7qb9gVDSwLR0LScHcbHF1ikmRmgjF1kB15S4QW+FlhwrOPidilGhC1NmZUKcqfYgcW/ZuQbnTfpCHs/DYZesNHQBJEBc+ML3MsMOLQ8O/DuM1A/03hWo4xK1TkqL4tbCDRA8/dBMzP5lyKAU9BfMMN4Xi8dhiyOH/CkbYZvlq225bgdWibBNF6dYqMdxHcUjf/ICi3e7xAJ7YeJW6GRablbvxFcNBAj1me88fzBTBi5Kn7QlvGat8UO3H+KV60LY1vddH7h2aeZzn7RMkbjNsDDbX3BvpRrApOJzqblbvAKjF0XH2CXGVKOCdjHo0q9KzwzJuC6qSTJi+J7nYD9/eiocmNi5PdSnQj00VIGkpzXk/92hKIttQfuWGj012+yHbhomTehWBYTcKLE0Do82S0YdkI55K+wD2DoEmOvyjvDpgXv52MXjChNnjftZvjU2gBnm3W03CI78LtrvCu8KSZgJY0UefHp7nZYSfXEYMieDBx0Xqkv/JN8NRD6wGmjQCha897OWq6wGXX1L7YDz9jgBd4am0pr/NGTvGcFuyQrVxVrGTiQfjPDQ4thO/kZbDlZO+C2Y4xvvD7VDly42KvSC2MCTnFzj+nPKDtsh37cPGcasdJ5MF0ne31h2BJRRTXMqCFwi9eMb0xcbgceMt0LXBS7W9L5Ql6eXWEHbjXETMqnRlY5CUGnrQoNveusETPHCtwgy+i/bLcduNf40FlTxCbplLycv9AOPMCcxZfywg+qkwWdBjPLQ0PvuwDDV8Lo8uhgx6w142kpJZ+xA7/Yx7vCLWIH1hkvL0sBzh949keGuj6QDsUfRrCmfiv93kpnYNnTUruSiekRRmssyRpt9NlppB1Woi75jpRoa3SFItE8N368c7BrapFrfDRnYvQuRCbpnWW+KOz0VfjkChz5DHpaqijn1MOgpNK5r3crjQDGE2VttgMXl3nVuTIsWEMXdzoVrOWATdW54bHI6+zAkiZ6oqcseGdHZOjOftCj5tsHaknBXCM+9rjDnvD25tD9PNMNdp+1vy8rbqpzflhgRWOcZ2ZS0R2ezZBnGcOC3dOzPc04enh0e6+Lma+KiDV1gp623qh6elxiWxi2zPd+4QZfcCMVDv/3JDe23KUcuIcFVjVeNQPuVUHPdBpY9eEFZhHAkqkfmFmLGwbOiw66W7HPT0uUFLhKIqv3wnPmZEr/8s5ba3x5sGREge/llXgnc2NYWO/RilTwZbO7+E1CQJPrS9JZVoDxEuldbGZDGVAQEG6Gkr7+pddRRhEuELriJHQ2jZO/NGoH6w/af/vhCb9SrZvmCdE0RWNlKP1XUmkoBTBZmUlrg1U7zfTLkkAM9VPBcPLGAqhn3iDIGGwAOqn4Oyvhb32NQ7gOI2DN/uDfbDoC9axrVqlkRAWcpPG0qdYXHCdEZ5oVWwcenSyvAs1M1zyuZUp0yYEkINZ+fbkfbDnqDB2NDDdr03IZLknj91Egc5uqUazqjHV6WsfFz6z6dJuC4GOUsiPQ3rSSIs37hA49A4MIOa3wZGY5sHJPzYBlT4umWJlSXC7FKKk8Zp67evauU548rNTnJ2ULSMwrNa2SitDQEzZBkxzfSWOgf41WREMe6+itePSPGizRzf2KRlNHaDedLZhBs52hF+2BDm/5XIjHyqdD81zIGGEEK71KDNWXmNs12Fcq8tTA5MRwac2gZ5vFQ1XnK0lxE6JpcqdKrLZcIgvxfJA1uF6TQ58SihvrU2zs+0Br6yRyftTMdEciUmfe5WDBI0mPQt91qnujuZYsV35VjTzZ12EmpbdYbulYH2SsarizoXkfw6gl8GoxZI+BzHzoMBpyCg1NKVrrM4b93/NFXHpecME9koibslJYVWdQQryaebfak0KK4ZHD79qcCftL4UqfLXiiMyytjA3aqnwk6XwpxYz4QWvcJ8G6pYYv9IFxZfEBl+sQUlPzqHvr4JOGSJJpxgeqRmlCPFtKB74vN2qsizCeQl0X6FcCM7bXAvo4rK3i5JNdWWf12y4ftp+IDrh8rzcg+TpqA+bfJOwMl2eKr1Y1hlhXGC2R/STXF/pNNYoJoq6T18GEVYYsPWAH3XiCz3dUU7brAslW36pG6yS3kbmJipduiw66+zjvKr8fE6wn8ND5QtGpjnRlXyyjXDqXQpqi8Xkk69xmKJd3VLOi8jRvHrzIfaH6lYsr1vYRo5Y7CSpPhQdesx+SW3lC5q+c8oSwaiulT0XnopLGT6N9T+DlbrTcv5BITtFYqups9wzcGPxWKTRE2595Cjja8hBPdQ0+bgmUDHMvKxoDogb2B7eMlaJTIjF4wjfQJDCy/kpGAo32w2FdQBZlycTlXrUur/EHVY1+lkoqGpuTNJok3OLmqchoDLcunosll2Dlg6rg/FoNkxjF8rEh5p/qWB0uv+k32R1aXY2/qDqLvRFbOrQvgCmrYf0hmL7eW/r5pNYf8xTsZZYN43RdTeeHCd9Qkz9H8uT1cqnc+Q/CSuL2MbHicickbh3Wokk+7NE+jQpZCNNNTpbbPPKD/wOWPAid7t5oUAAAAABJRU5ErkJggg==" alt="external-black-hole-space-vitaliy-gorbachev-blue-vitaly-gorbachev">
+      <span class="fs-3 fw-bold">Nolanverse</span>
+    </a>
+
+    <ul class="nav nav-pills">
+      <li class="nav-item"><a href="index.html" class="nav-link active" aria-current="page">Главная</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Фильмография</a></li>
+      <li class="nav-item"><a href="gallery.html" class="nav-link">Галерея</a></li>
+    </ul>
+
+
+  </header>
+</div> <!-- HEADER -->
+
+<main>
+
+  <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-bold">Погружение в кинематограф Нолана</h1>
+        <p class="lead text-body-secondary">Откройте для себя мир, где реальность переплетается с фантазией, время становится иллюзией, а каждая история оставляет неизгладимый след.</p>
+        <p>
+          <a href="#album" class="btn btn-primary btn-lg my-2">Вперёд!</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div id="album" class="album py-5 bg-body-tertiary">
+    <div class="container">
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-3">
+
+        <!-- Following -->
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-img-top bg-secondary text-white d-flex align-items-center justify-content-center" style="height: 200px;">
+              <img class="rounded-top img-fluid h-100" style="object-fit: cover;" src="https://i.ytimg.com/vi/JSiyQ1S1ERs/maxresdefault.jpg">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Преследование (Following, 1998)</h5>
+              <p class="card-text">Дебютный фильм Нолана о молодом писателе, который увлечённо наблюдает за незнакомцами, что приводит его в опасный мир преступников.</p>
+              <a href="https://rutube.ru/video/463cb519674321c28e65b01f6e277668/" class="btn btn-primary">Смотреть</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Memento -->
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-img-top bg-secondary text-white d-flex align-items-center justify-content-center" style="height: 200px;">
+              <img class="rounded-top img-fluid h-100" style="object-fit: cover;" src="https://cdn.posteritati.com/posters/000/000/049/638/memento-md-web.jpg">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Помни (Memento, 2000)</h5>
+              <p class="card-text">История человека с потерей кратковременной памяти, который использует фотографии и татуировки, чтобы найти убийцу своей жены.</p>
+              <div class="d-flex">
+                <a href="https://vk.com/video-43215063_456252695" class="btn btn-primary">Смотреть</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Insomnia -->
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-img-top bg-secondary text-white d-flex align-items-center justify-content-center" style="height: 200px;">
+              <img class="rounded-top img-fluid h-100" style="object-fit: cover;" src="https://www.tvguide.com/a/img/catalog/provider/2/2/2-604a254587cb8a1962b3f498b20ac4ea.jpg">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Бессонница (Insomnia, 2002)</h5>
+              <p class="card-text">Детектив расследует убийство в маленьком городке Аляски, сталкиваясь с собственными демонами из-за бессонницы.</p>
+                <a href="https://rutube.ru/video/dd15625103f49a96fd051e7dec54af04/" class="btn btn-primary">Смотреть</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Batman Begins -->
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-img-top bg-secondary text-white d-flex align-items-center justify-content-center" style="height: 200px;">
+              <img class="rounded-top img-fluid h-100" style="object-fit: cover;" src="https://i.ebayimg.com/00/s/MTA1NFgxNTAw/z/-4sAAOSw6dRhbff~/$_57.JPG?set_id=8800005007">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Batman Begins (2005)</h5>
+              <p class="card-text">История становления Брюса Уэйна как защитника Готэма, борющегося с преступностью под маской Бэтмена.</p>
+              <a href="https://rutube.ru/video/48dd5b9abcc748861ff7625bc6daa433/" class="btn btn-primary">Смотреть</a>
+            </div>
+          </div>
+        </div>
+        <!-- The Prestige -->
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-img-top bg-secondary text-white d-flex align-items-center justify-content-center" style="height: 200px;">
+              <img class="rounded-top img-fluid h-100" style="object-fit: cover;" src="https://media-cache.cinematerial.com/p/500x/d0hlsnah/the-prestige-poster.jpg?v=1456672166">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Престиж (The Prestige, 2006)</h5>
+              <p class="card-text">Противостояние двух иллюзионистов, чья одержимость раскрытием секретов друг друга приводит к трагедии.</p>
+              <a href="https://rutube.ru/video/e6799e1a4eb3fe857fce095e7b3c4beb/" class="btn btn-primary">Смотреть</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- The Dark Knight -->
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-img-top bg-secondary text-white d-flex align-items-center justify-content-center" style="height: 200px;">
+              <img class="rounded-top img-fluid h-100" style="object-fit: cover;" src="https://rukminim2.flixcart.com/image/850/1000/kzzw5u80/poster/o/r/b/medium-joker-the-dark-knight-movie-on-fine-art-paper-hd-quality-original-imagbvmycjvpv5ph.jpeg?q=20&crop=false">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Тёмный рыцарь (The Dark Knight, 2008)</h5>
+              <p class="card-text">Бэтмен сталкивается с Джокером, анархистом, который угрожает уничтожить Готэм и испытать моральные принципы героя.</p>
+              <a href="https://rutube.ru/video/74fb252e6f3a0e6eaedb0909dc6eaf29/" class="btn btn-primary">Смотреть</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Inception -->
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-img-top bg-secondary text-white d-flex align-items-center justify-content-center" style="height: 200px;">
+              <img class="rounded-top img-fluid h-100" style="object-fit: cover;" src="https://collider.com/wp-content/uploads/inception_movie_poster_banner_03.jpg">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Начало (Inception, 2010)</h5>
+              <p class="card-text">Команда профессионалов вторгается в сны, чтобы украсть или внедрить идеи, используя технологии управления сновидениями.</p>
+              <a href="https://rutube.ru/video/27c335dcbef386ff6adfd3fb392465c0/" class="btn btn-primary">Смотреть</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- The Dark Knight Rises -->
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-img-top bg-secondary text-white d-flex align-items-center justify-content-center" style="height: 200px;">
+              <img class="rounded-top img-fluid h-100" style="object-fit: cover;" src="https://lh4.googleusercontent.com/proxy/8eWmgdaFKzH6SuplofguVJNQPkxSoi02hHYEMucxpq15ltloPJOtnLieMmB45LvBAeBK1zog4cbegDL0YBwYv9FlRfz1EWPl7qpIRgDrLA3-AKnxd68Oag">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Тёмный рыцарь: Возрождение легенды (The Dark Knight Rises, 2012)</h5>
+              <p class="card-text">Брюс Уэйн возвращается как Бэтмен, чтобы противостоять угрозе, исходящей от террориста Бэйна.</p>
+              <a href="https://rutube.ru/video/efe465a1d7103f8ff6558ebf5d6d92be/" class="btn btn-primary">Смотреть</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interstellar -->
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-img-top bg-secondary text-white d-flex align-items-center justify-content-center" style="height: 200px;">
+              <img class="rounded-top img-fluid h-100" style="object-fit: cover;" src="images/images.jpg">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Интерстеллар (Interstellar, 2014)</h5>
+              <p class="card-text">Группа астронавтов отправляется за пределы Солнечной системы, чтобы найти новый дом для человечества.</p>
+              <a href="https://rutube.ru/video/854ce20ade387f87041ca1e29e002448/" class="btn btn-primary">Смотреть</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dunkirk -->
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-img-top bg-secondary text-white d-flex align-items-center justify-content-center" style="height: 200px;">
+              <img class="rounded-top img-fluid h-100" style="object-fit: cover;" src="https://rukminim2.flixcart.com/image/850/1000/jcf487k0/poster/m/c/w/medium-pl-dunkirk-wall-poster-13-19-inches-plashdtokormovpos4271-original-imafyvezg6wtftup.jpeg?q=90&crop=false">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Дюнкерк (Dunkirk, 2017)</h5>
+              <p class="card-text">Драма о событиях Второй мировой войны, где войска союзников были окружены и эвакуированы с пляжей Дюнкерка</p>
+              <a href="https://rutube.ru/video/bb85d974e1ac18b9efd012805b213467/" class="btn btn-primary">Смотреть</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tenet -->
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-img-top bg-secondary text-white d-flex align-items-center justify-content-center" style="height: 200px;">
+              <img class="rounded-top img-fluid h-100" style="object-fit: cover;" src="https://images.squarespace-cdn.com/content/v1/5e1f0187d17eee43e64faa27/1597332912040-356IGUJLZ314MXR1NX5K/tenet-movie-poster-01-700x400-1.jpg">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Довод (Tenet, 2020)</h5>
+              <p class="card-text">Агент использует технологию инверсии времени, чтобы предотвратить начало Третьей мировой войны</p>
+              <a href="https://rutube.ru/video/46238a88cf38e71a4233844845e6f93e/" class="btn btn-primary">Смотреть</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Oppenheimer -->
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-img-top bg-secondary text-white d-flex align-items-center justify-content-center" style="height: 200px;">
+              <img class="rounded-top img-fluid h-100" style="object-fit: cover;" src="https://cdnb.artstation.com/p/assets/images/images/078/442/485/large/huzi7-oppenheimer-landscape.jpg?1722115669">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Оппенгеймер (Oppenheimer, 2023)</h5>
+              <p class="card-text">История создания атомной бомбы глазами Роберта Оппенгеймера, известного как отец ядерного оружия.</p>
+              <a href="https://rutube.ru/video/ffe77a61fb1ab119c33638900d8a77e4/" class="btn btn-primary">Смотреть</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+</main>
+</body>
+</html>

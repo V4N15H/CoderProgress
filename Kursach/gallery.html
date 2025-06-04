@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="V5N15H">
+    <title>Nolanverse</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <script src="js/hover-script.js"></script>
+
+
+<style>
+    .card {
+        transition: transform 0.4s ease; /* Плавная анимация */
+    }
+
+    .card:hover {
+        transform: translateY(-5px); /* Смещение вверх на 5px */
+    }
+</style>
+
+    <!-- Custom styles for this template -->
+    <link href="css/carousel.css" rel="stylesheet">
+</head>
+<body>
+<div class="container-fluid">
+    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+        <a href="#" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+            <img class="bi me-3" role="img" aria-label="Galaxy" src="data:image/png;base64,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" alt="external-black-hole-space-vitaliy-gorbachev-blue-vitaly-gorbachev">
+            <span class="fs-3 fw-bold">Nolanverse</span>
+        </a>
+
+        <ul class="nav nav-pills">
+            <li class="nav-item"><a href="index.html" class="nav-link active" aria-current="page">Главная</a></li>
+            <li class="nav-item"><a href="filmography.html" class="nav-link">Фильмография</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Галерея</a></li>
+        </ul>
+
+
+    </header>
+</div> <!-- HEADER -->
+
+<main>
+
+    <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto">
+                <h1 class="fw-bold">Галерея</h1>
+                <p class="lead text-body-secondary">Погрузитесь в атмосферу культовых моментов: от величественных пейзажей до потрясающих сцен из фильмов. Каждое изображение – это история, которая оживает перед глазами.</p>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="container py-5">
+        <div class="row" data-masonry="{&quot;percentPosition&quot;: true }" style="position: relative; height: 1068px;">
+            <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 50%; top: 579px;">
+                <div class="card">
+                    <img class="card-img" width="100%" height="100%" role="img" src="images/nolan.jpg">
+                    <div class="card-img-overlay invisible text-light d-flex justify-content-end flex-column text-center" style="background-color: rgba(0, 0, 0, 0.5)">
+                        <h4>Нолан</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 50%; top: 579px;">
+                <div class="card">
+                    <img class="card-img" width="100%" height="100%" role="img" src="images/inception.jpg">
+                    <div class="card-img-overlay invisible text-light d-flex justify-content-end flex-column text-center" style="background-color: rgba(0, 0, 0, 0.5)">
+                        <h4>Начало</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 50%; top: 579px;">
+                <div class="card">
+                    <img class="card-img" width="100%" height="100%" role="img" src="https://film-grab.com/wp-content/uploads/2023/11/Oppenheimer-64.jpg">
+                    <div class="card-img-overlay invisible text-light d-flex justify-content-end flex-column text-center" style="background-color: rgba(0, 0, 0, 0.5)">
+                        <h4>Оппенгеймер</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 50%; top: 579px;">
+                <div class="card">
+                    <img class="card-img" width="100%" height="100%" role="img" src="https://film-grab.com/wp-content/uploads/2021/03/Tenet-047.jpg">
+                    <div class="card-img-overlay invisible text-light d-flex justify-content-end flex-column text-center" style="background-color: rgba(0, 0, 0, 0.5)">
+                        <h4>Довод</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 50%; top: 579px;">
+                <div class="card">
+                    <img class="card-img" width="100%" height="100%" role="img" src="https://film-grab.com/wp-content/uploads/2019/03/dunkirk021.jpg">
+                    <div class="card-img-overlay invisible text-light d-flex justify-content-end flex-column text-center" style="background-color: rgba(0, 0, 0, 0.5)">
+                        <h4>Дюнкерк</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 50%; top: 579px;">
+                <div class="card">
+                    <img class="card-img" width="100%" height="100%" role="img" src="images/director_at_work.jpg">
+                    <div class="card-img-overlay invisible text-light d-flex justify-content-end flex-column text-center" style="background-color: rgba(0, 0, 0, 0.5)">
+                        <h4>Тёмный рыцарь: Возрождение легенды</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 50%; top: 579px;">
+                <div class="card">
+                    <img class="card-img" width="100%" height="100%" role="img" src="https://film-grab.com/wp-content/uploads/2015/04/52-368.jpg">
+                    <div class="card-img-overlay invisible text-light d-flex justify-content-end flex-column text-center" style="background-color: rgba(0, 0, 0, 0.5)">
+                        <h4>Преследование</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 50%; top: 579px;">
+                <div class="card">
+                    <img class="card-img" width="100%" height="100%" role="img" src="https://film-grab.com/wp-content/uploads/2013/12/14.jpg">
+                    <div class="card-img-overlay invisible text-light d-flex justify-content-end flex-column text-center" style="background-color: rgba(0, 0, 0, 0.5)">
+                        <h4>Бессоница</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 50%; top: 579px;">
+                <div class="card">
+                    <img class="card-img" width="100%" height="100%" role="img" src="https://film-grab.com/wp-content/uploads/2010/06/15-1163.jpg">
+                    <div class="card-img-overlay invisible text-light d-flex justify-content-end flex-column text-center" style="background-color: rgba(0, 0, 0, 0.5)">
+                        <h4>Престиж</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 50%; top: 579px;">
+                <div class="card">
+                    <img class="card-img" width="100%" height="100%" role="img" src="https://film-grab.com/wp-content/uploads/2010/10/02-1027.jpg">
+                    <div class="card-img-overlay invisible text-light d-flex justify-content-end flex-column text-center" style="background-color: rgba(0, 0, 0, 0.5)">
+                        <h4>Тёмный рыцарь</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 50%; top: 579px;">
+                <div class="card">
+                    <img class="card-img" width="100%" height="100%" role="img" src="https://film-grab.com/wp-content/uploads/2011/03/08-681.jpg">
+                    <div class="card-img-overlay invisible text-light d-flex justify-content-end flex-column text-center" style="background-color: rgba(0, 0, 0, 0.5)">
+                        <h4>Помни</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+</body>
+</html>
